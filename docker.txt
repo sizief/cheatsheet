@@ -1,25 +1,9 @@
+** Run commands with SUDO**
 
-docker version
-docker info
+>docker version
 
-docker run -d -p 80:80 --name webserver nginx
-docker stop webserver 
-docker start webserver
-ocker rm -f webserver -> delete docker not image
-docker rmi nginx -> delete docker image
-docker tag e1815340b450 sizief/docker-whale:latest
+>docker info
 
-docker exec -it b7e23200d7fc /bin/bash -> open bash
-docker exec -t -i b7e23200d7fc /bin/bash
- /opt/logstash/bin/logstash -e 'input { stdin { } } output { elasticsearch { hosts => ["localhost"] } }'
-
-vim name file > press insert for edit mode > press escape to write command > write :wq (means write quit)
-----
->docker run -p 5601:5601 -p 9200:9200 -p 5044:5044 -it --name elk sebp/elk
-/opt/logstash/bin/logstash -e 'input { stdin { } } output { elasticsearch { hosts => ["localhost"] } }'
-docker run --name some-nginx -d -p 8080:80 some-content-nginx
-
-----
 >docker images
 #show the list of images
 
@@ -35,14 +19,24 @@ docker run --name some-nginx -d -p 8080:80 some-content-nginx
 >docker rm container-id-or-name
 #remove docker container
 
+>docker rmi imsge-name-here 
+#delete docker image
+
 >docker run image-name-here
 #run a NEW container and load it with an image
 
 >docker start cntainer-name-here -i
-#resume the container we created before with interactive SUDOT
+#resume the container we created before with interactive SUDOT, eg: docker start webserver
 
 >docker stop container-name
-#stop container 
+#stop container , eg: docker stop webserver 
 
 >docker exec -it container-name-here /bin/bash
-#open bash in container
+#open bash in container, eg: docker exec -it b7e23200d7fc /bin/bash
+
+
+---- docker for elastic help commands
+docker run -d -p 80:80 --name webserver nginx
+>docker run -p 5601:5601 -p 9200:9200 -p 5044:5044 -it --name elk sebp/elk
+/opt/logstash/bin/logstash -e 'input { stdin { } } output { elasticsearch { hosts => ["localhost"] } }'
+docker run --name some-nginx -d -p 8080:80 some-content-nginx

@@ -1,0 +1,1 @@
+vim name file > press insert for edit mode > press escape to write command > write :wq (means write quit)
