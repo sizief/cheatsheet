@@ -1,0 +1,7 @@
+Rbenv is a ruby version management. here is the documentation: 
+https://github.com/rbenv/rbenv
+
+if need to install any ruby version:
+1. list of all ruby versions: rbenv install -l
+2. install which ever you want: rbenv instal 2.1.1
+3. check the current ruby version: rbenv version 
