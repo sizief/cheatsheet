@@ -1,0 +1,9 @@
+## Add ruby build to sublime  
+1. find ruby path:  
+type -p ruby  
+  
+2. http://stackoverflow.com/questions/22983190/how-to-change-a-build-version-in-sublime-text-3  
+  
+## search through all file and folders 
+Ctrl + Shift + F
+
