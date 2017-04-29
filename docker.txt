@@ -1,40 +1,51 @@
-** Run commands with SUDO**
-
->docker version
-
->docker info
-
->docker images
-#show the list of images
-
->docker ps
-#show the list of active containers
-
->docker ps -a
-#show the list of all containers
-
->docker pull image-name-here
-#pull the docker imag
-
->docker rm container-id-or-name
-#remove docker container
-
->docker rmi imsge-name-here 
-#delete docker image
-
->docker run image-name-here
-#run a NEW container and load it with an image
-
->docker start cntainer-name-here -i
-#resume the container we created before with interactive SUDOT, eg: docker start webserver
-
->docker stop container-name
-#stop container , eg: docker stop webserver 
-
+** Run commands with SUDO** 
+ 
+##general 
+>docker version  
+  
+>docker info  
+  
+###open bash in container, eg: docker exec -it b7e23200d7fc /bin/bash  
 >docker exec -it container-name-here /bin/bash
-#open bash in container, eg: docker exec -it b7e23200d7fc /bin/bash
-
-
+  
+###run a NEW container and load it with an image  
+>docker run image-name-here  
+###run container with exposed port
+>docker run -itP image-name
+  
+  
+##Images  
+###show the list of images  
+>docker images  
+  
+###remove image
+>docker rmi image-name or image-id  
+  
+###create image
+>docker build -t image-name:image-tag
+  
+###pull the docker imag
+>docker pull image-name-here
+  
+  
+##Containers
+###show the list of active containers
+>docker ps  
+  
+###show the list of all containers  
+>docker ps -a  
+  
+###remove docker container
+>docker rm container-id-or-name  
+  
+###resume the container we created before with interactive SUDOT, eg: docker start webserver  
+>docker start cntainer-name-here -i  
+  
+###stop container , eg: docker stop webserver 
+>docker stop container-name  
+  
+  
+  
 ---- docker for elastic help commands
 docker run -d -p 80:80 --name webserver nginx
 >docker run -p 5601:5601 -p 9200:9200 -p 5044:5044 -it --name elk sebp/elk
