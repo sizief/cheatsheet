@@ -1,19 +1,34 @@
-** Run commands with SUDO** 
+** Run commands with SUDO or add your user to docker group** 
+if you want to use docker in develpment, then you should define a volume and pass it in docker run command. 
+Also you can define the volume in compose file.
  
+##Most used  
+>docker build -t imagename:tagname .
+>docker run -itP -v $(pwd):/app (->this is working directory specify in dockerfile) imagename:tagname .
+###open bash in container, eg: docker exec -it b7e23200d7fc /bin/bash    
+>docker exec -it container-name-here /bin/bash OR
+>docker-compose run app rails c
+>docker-compose run app rake db:create  
+>docker-compose run app rake db:migrate  
+###remove all containers  
+>docker rm $(docker ps -a -q)
+
+  
+  
 ##general 
 >docker version  
   
 >docker info  
   
-###open bash in container, eg: docker exec -it b7e23200d7fc /bin/bash  
->docker exec -it container-name-here /bin/bash
   
-###run a NEW container and load it with an image  
->docker run image-name-here  
-###run container with exposed port
->docker run -itP image-name
+##docker-compose  
+###build images  
+docker-compose build  
   
+###run service  
+docker-compose up  
   
+
 ##Images  
 ###show the list of images  
 >docker images  
@@ -22,7 +37,7 @@
 >docker rmi image-name or image-id  
   
 ###create image
->docker build -t image-name:image-tag
+>docker build -t image-name:image-tag .
   
 ###pull the docker imag
 >docker pull image-name-here
@@ -43,6 +58,15 @@
   
 ###stop container , eg: docker stop webserver 
 >docker stop container-name  
+  
+###run a NEW container and load it with an image  
+>docker run image-name-here  
+
+###run container with volume
+docker run -itP -v $(pwd):/app (->this is working directory specify in dockerfile) imagename:tagname .
+
+###run container with exposed port
+>docker run -itP image-name
   
   
   
