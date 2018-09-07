@@ -1,4 +1,3 @@
-# VIM cheatsheet
 ## General points
 * Install [vundle vim](https://github.com/VundleVim/Vundle.vim) to manage etenxion  
 * Run `:PluginInstall` to install plugins 
@@ -40,5 +39,7 @@ Switch between modes with `esc` and then type correspondig letter
 |   command   |   action   |
 |---------|------------|
 | Gstatus | status |
-
+| Gwrite  | add . |
+| Gread  |  checkout |
+| Gcommit | commit |
 
