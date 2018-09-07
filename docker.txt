@@ -7,6 +7,7 @@ Also you can define the volume in compose file.
 >docker run -itP -v $(pwd):/app (->this is working directory specify in dockerfile) imagename:tagname .
 ###open bash in container, eg: docker exec -it b7e23200d7fc /bin/bash    
 >docker exec -it container-name-here /bin/bash OR
+>docker-compose run app rails generate model
 >docker-compose run app rails c
 >docker-compose run app rake db:create  
 >docker-compose run app rake db:migrate  
@@ -67,11 +68,8 @@ docker run -itP -v $(pwd):/app (->this is working directory specify in dockerfil
 
 ###run container with exposed port
 >docker run -itP image-name
+
+### Run bash one container in compose
+docker-compose run container-name bash
   
-  
-  
----- docker for elastic help commands
-docker run -d -p 80:80 --name webserver nginx
->docker run -p 5601:5601 -p 9200:9200 -p 5044:5044 -it --name elk sebp/elk
-/opt/logstash/bin/logstash -e 'input { stdin { } } output { elasticsearch { hosts => ["localhost"] } }'
-docker run --name some-nginx -d -p 8080:80 some-content-nginx
+ 
