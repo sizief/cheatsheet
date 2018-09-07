@@ -39,6 +39,8 @@ Switch between modes with `esc` and then type correspondig letter
 
 ## Search
 
+> run `ctags -R .` every time something changed to index latest desfinations. 
+
 |   key   |  action  |
 |---------|----------|
 |   tag   | find tag |
@@ -66,7 +68,7 @@ Switch between modes with `esc` and then type correspondig letter
 ## Plugins
 
 ### Ack
-** need to install OS package first **
+> need to install OS package first   
 |   command   |   action   |
 |---------|------------|
 |  ack   |  search  |
