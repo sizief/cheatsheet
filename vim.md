@@ -68,20 +68,21 @@ Switch between modes with `esc` and then type correspondig letter
 ## Plugins
 
 ### Ack
-> need to install OS package first   
+> need to install OS package first.   
+  
 |   command   |   action   |
 |---------|------------|
 |  ack   |  search  |
 
 
-### vinegar
+### Vinegar
 
 |   command   |   action   |
 |---------|---------|
 |    -    |  open menu  |
 
 
-### fuGITive
+### FuGITive
 
 |   command   |   action   |
 |---------|------------|
@@ -91,7 +92,7 @@ Switch between modes with `esc` and then type correspondig letter
 | Gcommit | commit |
 | Gdiff  | diff |
 
-### add theme
+### Add theme
 1. Select a theme online. For example [this one](https://github.com/dracula/vim/tree/b7e11c087fe2a9e3023cdccf17985704e27b125d)
 2. Add `Plugin 'dracula/vim'` or whatever plugin you choose.
 3. Add `colorscheme dracula`
