@@ -1,7 +1,9 @@
 # VIM cheatsheet
+## General points
 * Install [vundle vim](https://github.com/VundleVim/Vundle.vim) to manage etenxion  
 * Run `:PluginInstall` to install plugins 
 * Run `:so %` to source the latest updates on `.vimrc` file whenever `.vimrc` is changed. 
+* Run any command with `:!` for example `:!git` correspondig
 
 
   
@@ -22,5 +24,21 @@ Switch between modes with `esc` and then type correspondig letter
 |---------|-----------|
 | <ctrl>+w | switch pane |
 | q       |  quit  |
+
+
+## Insert mode
+
+|   key   |   action   |
+|---------|------------|
+|<ctrl>+n | auto complete |
+
+
+## Plugins
+
+### fuGITive
+
+|   command   |   action   |
+|---------|------------|
+| Gstatus | status |
 
 
