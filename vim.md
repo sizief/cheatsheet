@@ -33,9 +33,11 @@ Switch between modes with `esc` and then type correspondig letter
   
 |   key   |  action   |
 |---------|-----------|
+|  bp     |  close last pane |
 | <ctrl>+w | switch pane |
 | q       |  quit  |
-
+| sp      |  split  |
+  vsp     |  vertical split |
 
 ## Insert mode
 
@@ -54,11 +56,12 @@ Switch between modes with `esc` and then type correspondig letter
 | Gwrite  | add . |
 | Gread  |  checkout |
 | Gcommit | commit |
-
+| Gdiff  | diff |
 
 ### add theme
-1. add a theme online. For example [this one](https://github.com/dracula/vim/tree/b7e11c087fe2a9e3023cdccf17985704e27b125d)
-2. add `Plugin 'dracula/vim'` or whatever plugin you choose.
-3. add `colorscheme dracula`
+1. Select a theme online. For example [this one](https://github.com/dracula/vim/tree/b7e11c087fe2a9e3023cdccf17985704e27b125d)
+2. Add `Plugin 'dracula/vim'` or whatever plugin you choose.
+3. Add `colorscheme dracula`
 4. `:so %`
+
 
