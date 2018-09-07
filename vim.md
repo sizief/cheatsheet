@@ -28,25 +28,56 @@ Switch between modes with `esc` and then type correspondig letter
 |   P   |   paste  |
 |   u   |   undo   |
 |   zz  |  current line in the center of display |
+| di( | delete inside ( |
+| di{  | delete inside { |
+
+## Insert mode
+
+|   key   |   action   |
+|---------|------------|
+| ^ n | auto complete |
+
+## Search
+
+|   key   |  action  |
+|---------|----------|
+|   tag   | find tag |
+|  ^ ]    | find defination |
+|  ^^   |  go back |
+## Tabs
+
+|   key   |   action   |
+|---------|------------|
+|  tabe  | open new tab |
+|  gt  | switch tab |
+
 
 ## Panes
   
 |   key   |  action   |
 |---------|-----------|
 |  bp     |  close last pane |
-| <ctrl>+w | switch pane |
+| ^ w | switch pane |
 | q       |  quit  |
 | sp      |  split  |
   vsp     |  vertical split |
 
-## Insert mode
-
-|   key   |   action   |
-|---------|------------|
-|<ctrl>+n | auto complete |
-
 
 ## Plugins
+
+### Ack
+** need to install OS package first **
+|   command   |   action   |
+|---------|------------|
+|  ack   |  search  |
+
+
+### vinegar
+
+|   command   |   action   |
+|---------|---------|
+|    -    |  open menu  |
+
 
 ### fuGITive
 
