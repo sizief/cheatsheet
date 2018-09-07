@@ -1,3 +1,3 @@
-#CHEATSHEET for various things
+# CHEATSHEET for various things
 
-* [vim](/blob/master/vim.md)
+* [vim](/vim.md)
