@@ -1,8 +1,13 @@
 ## CHEATSHEET for various things
 
-### vim
+### Vim
 * [vim notes](/vim.md)
 
 ### Perl
-* [Array](/array.pl)
-* [Hash](/hash.pl)
+* [Array](/perl/array.pl)
+* [Hash](/perl/hash.pl)
+
+### Docker
+* [Docker notes](/docker/docker.md)
+* [install docker on mint](/docker/install-docker-on-mint.md)
+
