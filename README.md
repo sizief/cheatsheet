@@ -1,3 +1,8 @@
-# CHEATSHEET for various things
+## CHEATSHEET for various things
 
-* [vim](/vim.md)
+### vim
+* [vim notes](/vim.md)
+
+### Perl
+* [Array](/array.pl)
+* [Hash](/hash.pl)
