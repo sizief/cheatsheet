@@ -9,6 +9,8 @@
 * [Hash](/perl/hash.pl)
 * [Map](/perl/map.pl)
 * [Grep](/perl/grep.pl)
+* [Define Package](/perl/TestPackage.pm)
+* [Use Package](/perl/TestPackageUsage.pl)
   
 
 ### Docker
