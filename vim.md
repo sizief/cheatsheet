@@ -15,10 +15,25 @@ Switch between modes with `esc` and then type correspondig letter
 |insert |  i  |
 |visual |  v  |
   
-## normal mode  
+
+## Command mode  
+|   key   |  action  |
+|---------|----------|
+|   :w    |   save   |
+|   :q    |   quit   |
+|   :q!   |  quit without save |
+|   :x    |   save and quit |
+
+## Normal mode  
   
 |  key  |  action  |
 |-------|----------|
+|   0   |  start of line |
+|   $   | end of line |
+| page up | ctrl + u |
+|  page down | ctrl + f |         
+|  gg   |  start of file |
+|   G   |  end of file |
 |   v   |   select |
 |   V   |   sleect whole line |
 |   y   |   copy   |
@@ -27,6 +42,7 @@ Switch between modes with `esc` and then type correspondig letter
 |   d   |   delete |
 |   P   |   paste  |
 |   u   |   undo   |
+|   w   |  next word |
 |   zz  |  current line in the center of display |
 | di( | delete inside ( |
 | di{  | delete inside { |
