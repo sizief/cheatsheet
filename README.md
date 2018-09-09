@@ -4,8 +4,12 @@
 * [vim notes](/vim.md)
 
 ### Perl
+
 * [Array](/perl/array.pl)
 * [Hash](/perl/hash.pl)
+* [Map](/perl/map.pl)
+* [Grep](/perl/grep.pl)
+  
 
 ### Docker
 * [Docker notes](/docker/docker.md)
