@@ -39,6 +39,21 @@ Plugin 'yko/mojo.vim'
 Plugin 'plasticboy/vim-markdown'
 " Code tags
 Plugin 'majutsushi/tagbar'
+Plugin 'tpope/vim-vinegar'
+Plugin 'dracula/vim'
+
+"---------------auto complete--------"
+Plugin 'maralla/completor.vim'
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <cr> pumvisible() ? "\<C-y>\<cr>" : "\<cr>"
+
+"---------------perl run command-----"
+map <C-b> :w<CR>:!perl %<CR>
+imap <C-b> <Esc>:w<CR>:!perl %<CR>
+"------------------------------------"
+
+
 map <Leader>t :CtrlPBuffer<CR>
  let g:ctrlp_map = '<C-p>'
  let g:ctrlp_working_path_mode = 0 " don’t manage working directory.
@@ -63,6 +78,7 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
+set number
 set autoindent
 set backspace=indent,eol,start
 set cindent " set smartindent
@@ -96,8 +112,8 @@ set wrap
 set colorcolumn=80
 syntax on
 
-colorscheme desert
 
+colorscheme dracula
 highlight   CursorColumn  term=NONE    cterm=none ctermbg=232
 highlight   CursorLine    term=NONE    cterm=bold ctermbg=8
 highlight   FoldColumn                            ctermbg=8  ctermfg=14
