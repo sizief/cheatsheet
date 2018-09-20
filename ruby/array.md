@@ -1,4 +1,14 @@
 ## Arrays
+- Sting to Array  
+  `"string".chars` #["s","t","r","i","n","g"]  
+  `"string".split("")` #["s","t","r","i","n","g"]  
+  
+- Array to String
+ `array.join`
+
+- number of occurences of an element in array
+  `array.count(element)`
+
 - loop in array  
   for name in array  
     puts name  
@@ -14,4 +24,6 @@
     
 - select: query on array  
   `array.select{|x| x != 1}`  
-  
+   
+- reject: opposite of select
+   
