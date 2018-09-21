@@ -9,6 +9,9 @@
 - number of occurences of an element in array
   `array.count(element)`
 
+- sort by length
+  `array.sort_by(&:length)`
+
 - loop in array  
   for name in array  
     puts name  
