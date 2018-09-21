@@ -29,4 +29,6 @@
   `array.select{|x| x != 1}`  
    
 - reject: opposite of select
-   
+
+- find index   
+- `array.index(element)`  
