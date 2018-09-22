@@ -2,7 +2,7 @@
   - define
     `say_something = lambda {puts "this is lambda"}  
     `say_something = -> {puts "this is lambda"}  
-   
+    `say_something = -> (name) {puts "#{name}"}  
 
 
 
@@ -12,5 +12,7 @@
   
   
   - call  
-    `say_something.call`  
-  
+    `say_something.call`
+    `say_something.call("ali")`  
+    `array.map(&lambda)`
+    `array.:map(&say_something)`
