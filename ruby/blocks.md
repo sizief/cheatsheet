@@ -7,12 +7,13 @@
 
 
 ## Proc  
-  - define  
+  - define   
     `say_something =  Proc.new {puts "this is lambda"}  
+    `-> (x) { x * 3 }`
   
   
   - call  
     `say_something.call`
     `say_something.call("ali")`  
     `array.map(&lambda)`
-    `array.:map(&say_something)`
+  
