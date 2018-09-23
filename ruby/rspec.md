@@ -1,5 +1,8 @@
 ## Rspec
+### run `rspec file_name`
+```require 'rspec'
 
+<<<<<<< HEAD
 ### General
    `(1+2).should eq 3`  
    `expect(1+2).to eq 3`  
@@ -54,3 +57,4 @@ describe "calculate all numbers multipilication" do
       Calculate.perform([1,2,3,4]).should eql [24,12,8,6]  
     end  
 end  
+
