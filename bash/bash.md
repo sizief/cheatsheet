@@ -6,6 +6,15 @@
 - where am I  
   `pwd`  
   
-- rename
-  `mv old_name new_name`
+- rename  
+  `mv old_name new_name`  
   
+- find  
+- `find . -name "filename"`  
+  
+- find in file  
+-  `grep -rl "text" folder`  
+  
+- folder or file size  
+- `du -sh foldr_name`  
+

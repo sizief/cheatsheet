@@ -4,7 +4,11 @@
 * [vim notes](/vim.md)
 
 ### Perl
-
+   `cpanm Data::Dumper`  
+   `perl -d -e1`  
+   `perldoc -q`  
+   `perldoc -f function_name`  
+     
 * [Array](/perl/array.pl)
 * [Hash](/perl/hash.pl)
 * [Map](/perl/map.pl)
