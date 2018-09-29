@@ -1,15 +1,22 @@
 ## General
-  - Run the service  
+   - Run the service  
    `sudo service postgresql start `  
 
-  - Service status
+  - Service status  
    `pg_lsclusters`  
 
-  - Login
+  - Login  
    `sudo -u postgres psql`  
 
-  - Connect to DB
-   `\c DATABASE_NAME`
+  - Connect to DB  
+   `\c DATABASE_NAME`  
      
-  - List of DB
-   `\l`
+  - List of DB  
+   `\l`  
+
+  - Create user  
+   `CREATE ROLE username WITH LOGIN ENCRYPTED PASSWORD 'qwerty' SUPERUSER;`  
+   
+  -- Create Database  
+   `CREATE DATABASE databasename WITH OWNER username ENCODING 'UTF8';`
+
