@@ -8,15 +8,17 @@
   - Login  
    `sudo -u postgres psql`  
 
-  - Connect to DB  
+  - Connect to DB    
    `\c DATABASE_NAME`  
      
-  - List of DB  
+  - List of DB    
    `\l`  
 
-  - Create user  
+  - Create user    
    `CREATE ROLE username WITH LOGIN ENCRYPTED PASSWORD 'qwerty' SUPERUSER;`  
    
-  -- Create Database  
+  - Create Database    
    `CREATE DATABASE databasename WITH OWNER username ENCODING 'UTF8';`
 
+  - Drop Role
+   `Drop role role_name`

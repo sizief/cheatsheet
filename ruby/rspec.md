@@ -1,7 +1,7 @@
 ## Rspec
+
 ### run `rspec file_name`
-```
-require 'rspec'
+   `require 'rspec'`
 
 ### General
    `(1+2).should eq 3`  
@@ -39,7 +39,6 @@ require 'rspec'
    ```
    it "should return list object" do
     expect(subject).to be_an_instance_of List
->>>>>>> abb39f7c9a1e98bf528a6a122885c179665edd4f
   end
    ```
 
