@@ -1,4 +1,7 @@
 ## Arrays
+- sample
+- array.sample
+
 - Sting to Array  
   `"string".chars` #["s","t","r","i","n","g"]  
   `"string".split("")` #["s","t","r","i","n","g"]  
