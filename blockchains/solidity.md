@@ -10,12 +10,12 @@
     uint age;
   }  
 z = Zombie("Ali",20)  
-a.name // ali
+z.name // ali
   
 ### Array
- uint[4] name; // array of int width 4
- Zombie[] name; // array of struct zombie
- uint[] public name; //anyone can read this array
+ uint[4] name; // array of int width 4  
+ Zombie[] name; // array of struct zombie  
+ uint[] public name; //anyone can read this array  
 
  arrayName.push(new element)
   
@@ -44,7 +44,7 @@ a.name // ali
   
 ### If 
   // Require to following condition to be true.  
-  // to comare two strings, compare ther keccak256 value.   
+  // to compare two strings, compare their keccak256 value.   
   require(keccak256(_name) == keccak256("Vitalik"));  
     
 ### Inheritance  
