@@ -25,7 +25,7 @@
   
 ### Blockchains
 * [Blockchains](/blockchains/blockchain.md)
+* [Bitcoin](/blockchains/bitcoin.md)
+* [Ethereum](/blockchains/ethereum.md)
 * [Solidity](/blockchains/solidity.md)
-
-
  
