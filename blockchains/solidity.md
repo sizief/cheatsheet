@@ -49,7 +49,7 @@ function <name> ([arg1, arg2, ...]) <visibility> [mutability] [returns ([ret1, r
   require(keccak256(_name) == keccak256("Vitalik"));  
     
 ### Modifiers 
-  modifier <name>([arg1, arg2, ...]) {
+  modifier <name>([arg1, arg2, ...]) { 
   [require(<e>);]* // all the requirements
   
   _; // means that the function code will be inserted here
@@ -120,6 +120,10 @@ Secondly, we're not defining the function bodies. Instead of curly braces ({ and
 
 ### Gas matters!
 Can save gas with specifying `uint32` or `uinu16` instead of `uint` in structs. 
+### Payable  
+    function () payable public {
+This function is a so-called fallback or default function, which is called if the transaction that triggered the contract didn’t name any of the declared functions in the contract, or any function at all, or didn’t contain data. Contracts can have one such default function (without a name) and it is usually the one that receives ether. That’s why it is defined as a public and payable function, which means it can accept ether into the contract. It doesn’t do anything, other than accept the ether, as indicated by the empty definition in the curly braces ({}). If we make a transaction that sends ether to the contract address, as if it were a wallet, this function will handle it.
+
 
 
 
