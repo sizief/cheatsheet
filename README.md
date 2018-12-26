@@ -28,4 +28,7 @@
 * [Bitcoin](/blockchains/bitcoin.md)
 * [Ethereum](/blockchains/ethereum.md)
 * [Solidity](/blockchains/solidity.md)
- 
+* [Web3](blockchains/web3.md)
+
+### Elixir
+* [Elixir](elixir.md)
