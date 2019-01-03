@@ -12,7 +12,13 @@
    `\c DATABASE_NAME`  
      
   - List of DB    
-   `\l`  
+   `\l`
+
+  - List of tables    
+   `\d`  -> tab
+
+  - Show list vertically
+   `\x`
 
   - Create user    
    `CREATE ROLE username WITH LOGIN ENCRYPTED PASSWORD 'qwerty' SUPERUSER;`  
