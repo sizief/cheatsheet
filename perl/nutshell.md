@@ -32,21 +32,36 @@ use feature ':5.10';
 - length of array  `scalar(@a)`
 - `@lenths_of = map {length($_)} @ARGV`
 - `sort(@arr)`
+- `join(",", @arr)` and string to array: `split(" ", $string)`
 
 ## Hash
 - `%h = (name => "ali", family=>"deishidi")`
 - `%h = ("name", "ali", "family", "deishidi")`
 - `$h{name}`
-- `$hashref = {name => "ali"}`
-- `$hashref->{name}`
 - `delete $h{key}` to delete a key-
 - `exists($hash{key})`
 - `keys(%hash)` or `values(%hash)`
 - ` my @ranked_keys = sort { $hash_args{$b} <=> $hash_args{$a} } keys(%hash_args);`
 
-
 ## Refrences
-- `$hash_ref = \%hash; print $has_ref->{key}`
+- `$name = 'ali'; $scalar_ref = \$name` 
+- `$$scalar_ref`
+- `$array_ref = [1,2,3]` anonymous array or `$ref = \@array;`
+- `$array_ref->[0]`
+- `$hash_ref = {a => 1, b => 2}` or `$hash_ref = \%hash` 
+- `$has_ref->{key}`
+- `sub foo {print x}; $mehotd_ref = \&foo` or `my $mehotd_ref = sub {print x}`
+- `$method_ref->()` or `&$method_ref`
+
+
+## Map and Grep
+- `@lenths_of = map {length($_)} @ARGV`
+- `@lenths_of = grep { /name/ } @ARGV`  #Using Regex
+
+
+## Sort
+- `sub by_value {return scalar($a) <=> scalar($b)};`
+- `my @barr = sort by_value @arr;`
 
 
 ## Flow control
@@ -59,6 +74,10 @@ use feature ':5.10';
 - Use module `use BOM::Platform::Client::CashierValidation;`
 - Use subs from that module - > use full name `print BOM::Platform::Client::CashierValidation(something)`
 - Import specific subs `use BOM::CTC::Utility::Base32 qw( encode_base32 decode_legacy );` then `print encode_base32(something)` 
+- should end with 1;
+- Inhertance `use parent 'FurnitureShop';`
+- can install on specific folder `cpanm -L extlib Geo::Coder::Google::V3`
+and then `use local::lib './extlib;' ;use Geo::Coder::Google;`
 
 
 ## Flow Control
@@ -74,6 +93,20 @@ given(scalara(@)){
 }```
 - `foreach my $var (@arr){puts $var;}`
 
+
+## Test
+- run tests `prove -lv t/airport/10_data.t`
+- `use_ok('Airport::Data');` Package is ok 
+
+## Regex
+- `"this is test" =~ /test/` #output is 1 (means TRUE)
+- `"this is test" =~ /^test/` #find word at the beginning, output is false
+- `"this is test" =~ /test$/` #find word at the end, output is 1 
+- `"total" =~ /[abc]/` #find a or b or c
+- `$name = "ali deishidi"; $name =~ s/ali/akhavan/g` search and replace
+
 ## Others
 - print `ls`; use "`" to run bash command 
 - Global vars: `@ARGV`
+- `print pp (\%INC);` to see all places perl search for packages
+- place `#!/usr/bin/perl -Ilib` at the top of bin file to locate lib folder
