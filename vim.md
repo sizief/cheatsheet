@@ -4,10 +4,8 @@
 * Run `:so %` in `.vimrc` to source the latest updates on `.vimrc` file whenever `.vimrc` is changed. 
 * Run any command with `:!` for example `:!git` correspondig
 ## Set Config
- -```
-   set wildmode=list,longest
-   set wildmenu
- ```
+ - `set wildmode=list,longest`
+ - `set wildmenu`
 
   
 ## Modes  
