@@ -1,6 +1,7 @@
 Connect it via RPC:  
 `curl -X POST -H "Content-Type: application/json" --data '{"jsonrpc": "2.0", "id": 1, "method": "eth_blockNumber", "params": []}' https://mainnet.infura.io/v3/99f720fff2634935b847fe561224ffb3`  
-  
+`curl -X POST -H "Content-Type: application/json" --data '{"jsonrpc": "2.0", "id": 1, "method": "eth_blockNumber", "params": []}' http://localhost:8545
+`    
     
 ## Run mist with local node
   Cd to/geth/folder  
