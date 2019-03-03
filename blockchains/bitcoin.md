@@ -1,3 +1,14 @@
+Config is in ~/.bitcoin/bitcoin.conf.  
+Two ways to connect through RPC:  
+  - Does not need config file
+  - Run node: `bitcoind -server -rpcuser=ali -rpcpassword=whatever`  
+  - And then: curl --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getblockcount", "params": [] }' -H 'content-type: text/plain;' http://ali:whatever@127.0.0.1:8332/
+  or  
+  - Set user name and password in config file  
+  - Run node `bitcoind`  
+  - `curl --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getblockcount", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/`  
+
+
 ### Wallet
 `bitcoin-cli getwalletinfo`  
 `bitcoin-cli walletpassphrase [password] [number of seconds]`  
