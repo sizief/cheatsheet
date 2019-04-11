@@ -78,10 +78,13 @@ use feature ':5.10';
 - Inhertance `use parent 'FurnitureShop';`
 - can install on specific folder `cpanm -L extlib Geo::Coder::Google::V3`
 and then `use local::lib './extlib;' ;use Geo::Coder::Google;`
+- use `perl -I{.pm file address} file` to include and use file. and `use class` on client file. Or use `use lib './'` on client file.
 
+##  OO
+see [link to folder](./oop/)
 
 ## Flow Control
-- `if(){}else{}`
+- `if(){}else{}` 
 - ```use feature qw/switch/;
 given(scalara(@)){
     when($_>2){
@@ -110,3 +113,12 @@ given(scalara(@)){
 - Global vars: `@ARGV`
 - `print pp (\%INC);` to see all places perl search for packages
 - place `#!/usr/bin/perl -Ilib` at the top of bin file to locate lib folder
+
+
+## Dzil
+to pack and make your project ready for CPAN.  
+```$ cpanm --notest Dist::Zilla \
+  Dist::Zilla::Plugin::ReadmeAnyFromPod \
+  Dist::Zilla::Plugin::CopyFilesFromBuild
+```
+or ```sudo apt-get install dh-dist-zilla```

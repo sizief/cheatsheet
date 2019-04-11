@@ -1,3 +1,23 @@
+This is the normal steps:
+## Docker
+ - create `Dockerfile`
+ - `docker build -t image_name:version .` # create image
+ - `docker images` # check all images
+ - `docker run image_name --name container_name` # create and start container
+ - `docker stop container_name`
+ - `docker start container_name` # start container
+ - `docker container rm container_name` # remove container 
+ 
+## Docker compose
+ - Create `docker_compose.yml`
+ - `docker-compose build` # create images
+ - `docker-compose up` # create and start containers
+ - `docker-compose start` # start containers
+ - `docker-compose down` # stop and remove containers
+ -
+
+
+---- Mess of data from here. Clean this up later.
 ** Run commands with SUDO or add your user to docker group** 
 if you want to use docker in develpment, then you should define a volume and pass it in docker run command. 
 Also you can define the volume in compose file.

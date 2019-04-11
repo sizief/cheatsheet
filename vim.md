@@ -3,11 +3,14 @@
 * Run `:PluginInstall` to install plugins 
 * Run `:so %` in `.vimrc` to source the latest updates on `.vimrc` file whenever `.vimrc` is changed. 
 * Run any command with `:!` for example `:!git` correspondig
+* `<CR>` means carriage returns = ENTER
+* `<Leader>anything` means leader ( default is `\`) and anything after that.
+
 ## Set Config
- - `set wildmode=list,longest`
+  - `set wildmode=list,longest`
  - `set wildmenu`
 
-  
+ 
 ## Modes  
 Switch between modes with `esc` and then type correspondig letter  
   
@@ -25,7 +28,9 @@ Switch between modes with `esc` and then type correspondig letter
 |   :q    |   quit   |
 |   :q!   |  quit without save |
 |   :x    |   save and quit |
-
+|   :e    |   edit new file |
+|   :b    |   switch between files |
+|   :ls   |  list of buffers  |
 ## Normal mode  
   
 |  key  |  action  |
@@ -116,4 +121,8 @@ Switch between modes with `esc` and then type correspondig letter
 3. Add `colorscheme dracula`
 4. `:so %`
 
-
+## Terminal
+`:term` or `:term :vert`  
+<c-w> to chnage pane  
+<c-\><c-n>:q to quit  
+See [here](https://github.com/vim/vim/blob/master/runtime/doc/terminal.txt) 
