@@ -126,3 +126,7 @@ Switch between modes with `esc` and then type correspondig letter
 <c-w> to chnage pane  
 <c-\><c-n>:q to quit  
 See [here](https://github.com/vim/vim/blob/master/runtime/doc/terminal.txt) 
+## Commenting
+Use [NerdCommenter](https://github.com/scrooloose/nerdcommenter)
+`\cc` to comment
+`\c <space>` to uncomment

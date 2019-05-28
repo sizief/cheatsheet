@@ -4,9 +4,14 @@ This is the normal steps:
  - `docker build -t image_name:version .` # create image
  - `docker images` # check all images
  - `docker run image_name --name container_name` # create and start container
+ - `docker exec -it container_name bash` # create and start container
  - `docker stop container_name`
  - `docker start container_name` # start container
  - `docker container rm container_name` # remove container 
+
+ - ports HOST:CONTAINER
+ - ports CONTAINER
+ - `Expose` only to other machines not host
  
 ## Docker compose
  - Create `docker_compose.yml`
