@@ -9,7 +9,7 @@ Node Package Manager. three types of modules are available:
 - packages for front-end
 Install packages: `npm install package_name` use `-g` to install it globally instead of project folder. 
 `export NODE_PATH=/usr/local/lib/node_modules` to require gloablly installed packages in node modules.
-
+- Babel converts import and export declaration to CommonJS (require/module.exports)
 ## General
 Original way of sendig HTTP request is xmlHttpRequest. which limited to same origin. Other wise any website can use the request to DDOS your api.
 Using semicolon at the end of line is optional
