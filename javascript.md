@@ -1,7 +1,7 @@
 ## Questions
 - What is Symbol data type?
 - The `XMLHttpRequest` is theh only way to send request using JS without any packages?
-
+ 
 ## NPM
 Node Package Manager. three types of modules are available:
 - packages for CLI
