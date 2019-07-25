@@ -1,5 +1,5 @@
 ## Questions
-- What is Symbol data type?
+- What is Symbol data type? 
 - The `XMLHttpRequest` is theh only way to send request using JS without any packages?
  
 ## NPM
