@@ -14,13 +14,13 @@ Install packages: `npm install package_name` use `-g` to install it globally ins
 
 ## General
 `use strict`;  
-Sting interpolation `console.log(`${var}`)`
+Sting interpolation `console.log(\`${var}\`)`  
 Original way of sendig HTTP request is xmlHttpRequest. which limited to same origin. Other wise any website can use the request to DDOS your api.  
 Using semicolon at the end of line is optional.  
-use `node` to run the code on terminal.  
-use `node file.js` to run the code inside file.  
-use `typeof(x)` to get the type.  
-NAtive objects: ` Date, Math, parseInt, eval` VS host objects `assuming browser environment): window, document, location, history, XMLHttpRequest, setTimeout, getElementsByTagName`
+Use `node` to run the code on terminal.  
+Use `node file.js` to run the code inside file.  
+Use `typeof(x)` to get the type.  
+Native objects: `Date, Math, parseInt, eval` VS host objects (assuming browser environment): `window, document, location, history, XMLHttpRequest, setTimeout, getElementsByTagName`
 
 # Variables
 - `var` whenever they occured, they proccessed before code execution.
@@ -37,7 +37,7 @@ NAtive objects: ` Date, Math, parseInt, eval` VS host objects `assuming browser 
 - Symbol ?
 - Object `{name: 'ali'}` or `[1,2,3]`
 - Function `function() {}`
-- `Array` is not a `object` so `x = [1,2,3]; x[1] //2`
+- `Array` is not a `data type`. It is an `object` so `x = [1,2,3]; x[1] //2`
 
 ## Comparison
 - `==` is equality operator, first coerce type and then compare values  
@@ -50,7 +50,7 @@ NAtive objects: ` Date, Math, parseInt, eval` VS host objects `assuming browser 
 - Functions are first class citizens in JS meaning that they are data types. `x = function ali(){1}; x //=> [function: ali]; x() //=> 1; x.name //=> ali`
 - `function gholi(item = 'default name'){}`
 - `const variable = function(arg){};`
-- Arrow function `const variable = (arg) => {}` or `const variable = arg => arg * 2 `. If there is only one parameter, there is no need to use parantheses and curly bruces.
+- Arrow function `const variable = (arg, param) => {return arg * param}` or `const variable = arg => arg * 2 `. If there is only one parameter, there is no need to use parantheses and curly bruces.
 - When we pass another function as a argument to a function, that first function called `callback function`
 
 ## Loops
@@ -65,8 +65,8 @@ NAtive objects: ` Date, Math, parseInt, eval` VS host objects `assuming browser 
 - findIndex `[a,b].FindIndex(item => {return item == b}) //=> 1`
 - reduce `[1,2,3].reduce((accumulator,currentValue) => {return accumulator+currentValue}, 100) \\=> 106`
 
-## Objects
-- define object `let obj = {name: 'ali', 'family name': 'deishidi'};``obj.name` or `obj['family name']`
+## Objects (Or hashes on streiod)
+- define object `let obj = {name: 'ali', 'family name': 'deishidi'}; obj.name \\=>ali` or `obj['family name']`
 - delete key `delete obj.name`
 - define method `let obj = {name: 'ali', sendMessage(){console.log('I am object method')}}` or `let obj = {methodName: () => {}}`
 - iterate over objects `for(let key in object){}` the index in loop would be a key only not object
