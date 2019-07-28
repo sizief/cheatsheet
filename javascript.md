@@ -14,6 +14,7 @@ Install packages: `npm install package_name` use `-g` to install it globally ins
 
 ## General
 `use strict`;  
+Sting interpolation `console.log(`${var}`)`
 Original way of sendig HTTP request is xmlHttpRequest. which limited to same origin. Other wise any website can use the request to DDOS your api.  
 Using semicolon at the end of line is optional.  
 use `node` to run the code on terminal.  
@@ -36,6 +37,7 @@ NAtive objects: ` Date, Math, parseInt, eval` VS host objects `assuming browser 
 - Symbol ?
 - Object `{name: 'ali'}` or `[1,2,3]`
 - Function `function() {}`
+- `Array` is not a `object` so `x = [1,2,3]; x[1] //2`
 
 ## Comparison
 - `==` is equality operator, first coerce type and then compare values  
@@ -45,5 +47,114 @@ NAtive objects: ` Date, Math, parseInt, eval` VS host objects `assuming browser 
 - `if () {} else {} `
 
 ## Functions
+- Functions are first class citizens in JS meaning that they are data types. `x = function ali(){1}; x //=> [function: ali]; x() //=> 1; x.name //=> ali`
 - `function gholi(item = 'default name'){}`
 - `const variable = function(arg){};`
+- Arrow function `const variable = (arg) => {}` or `const variable = arg => arg * 2 `. If there is only one parameter, there is no need to use parantheses and curly bruces.
+- When we pass another function as a argument to a function, that first function called `callback function`
+
+## Loops
+- `for (var i in object){i}`
+- `for (var i=0; i <10; i++){}`
+- `while(){}`
+
+## Iterators
+- forEach `[1,2].forEach(item => console.log(item))` or `[1,2].forEach(function(item){console.log(item)})`
+- map `[1,2].map(item => item * 2) //=> [2,4]`
+- filter `[1,2].filter(item => item < 2) //=> [1]`
+- findIndex `[a,b].FindIndex(item => {return item == b}) //=> 1`
+- reduce `[1,2,3].reduce((accumulator,currentValue) => {return accumulator+currentValue}, 100) \\=> 106`
+
+## Objects
+- define object `let obj = {name: 'ali', 'family name': 'deishidi'};``obj.name` or `obj['family name']`
+- delete key `delete obj.name`
+- define method `let obj = {name: 'ali', sendMessage(){console.log('I am object method')}}` or `let obj = {methodName: () => {}}`
+- iterate over objects `for(let key in object){}` the index in loop would be a key only not object
+- private attributes `let obj = {_name: 'ali'}`
+- getter `let obj={get fullName(){}}`
+- setter `let obj={set fullName(){}}`
+- object factory 
+```
+  const robotFactory = (model, mobile) => {
+  return {
+    model: model,
+    mobile: mobile,
+    beep(){console.log('Beep Boop')}
+  }
+}
+```
+or
+```
+  const robotFactory = (model, mobile) => {
+  return {
+    model,
+    mobile,
+    beep(){console.log('Beep Boop')}
+  }
+}
+```
+- Destructured Assignment. instead of `const name = obj.name` go `const {name} = obj`
+
+## Classes
+```
+class Person {
+  constructor(name){
+    this._name = name;
+  }
+
+  get name(){
+    return this._name;
+  }
+
+  set name(newName){
+    this._name = newName;
+  }
+
+  static generatePassword(){
+    return Math.floor(Math.random() * 10000);
+  }
+}
+
+class Teacher extends Person{
+  constructor(name){
+    ssuper(name)
+  }
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
