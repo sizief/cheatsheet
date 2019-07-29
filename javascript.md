@@ -139,6 +139,13 @@ class Teacher extends Person{
 ```
 - Run `npm run build`
 
+## Modules
+- Node: `module.exports = Object` and then `const object = require('./object_file.js')`
+- or `module.exports{name: 'gholi', getName: function(){return this.name}}`
+- ES6: `export default Object` and then `import Object from './object'`
+- or `let name = 'ali'; function getName(){}; export {name, getName}` and then `import {name, getName} from './file_name'`
+- or `export let name = ali; export let function getName(){}`
+- or `let name = ali; function getName(){}; export {name as nm, getName as gn}` and then `import {nm, gn}`
 
 
 
@@ -168,7 +175,4 @@ class Teacher extends Person{
 
 
 
-
-
-
-
+i
