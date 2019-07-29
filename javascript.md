@@ -14,7 +14,7 @@ Install packages: `npm install package_name` use `-g` to install it globally ins
 
 ## General
 `use strict`;  
-Sting interpolation `console.log(\`${var}\`)`  
+Sting interpolation `console.log(\`${var}`)`  
 Original way of sendig HTTP request is xmlHttpRequest. which limited to same origin. Other wise any website can use the request to DDOS your api.  
 Using semicolon at the end of line is optional.  
 Use `node` to run the code on terminal.  
@@ -122,8 +122,22 @@ class Teacher extends Person{
 }
 ```
 
-
-
+## Transpilation
+- Create `src` folder and put main.js in it.
+- Run `npm init`
+- Run `npm install babel-cli -D`
+- Run `npm install babel-preset-env -D`
+- Add following to `.babelrc` 
+```
+{
+  "presets": ["env"]
+}
+```
+- Add following to `scripts` on `package.json`
+```
+"build": "babel src -d lib"
+```
+- Run `npm run build`
 
 
 
