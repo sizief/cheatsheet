@@ -68,7 +68,7 @@ Switch between modes with `esc` and then type correspondig letter
 |---------|----------|
 |   tag   | find tag |
 |  ^ ]    | find defination |
-|  ^^   |  go back |
+|  ^o   |  go back |
 ## Tabs
 
 |   key   |   action   |

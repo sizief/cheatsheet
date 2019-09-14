@@ -122,6 +122,11 @@ class Teacher extends Person{
 }
 ```
 
+and then  
+  
+`const p = new Person('ali');`  
+`p.name` not `p.name()`
+
 ## Transpilation
 - Create `src` folder and put main.js in it.
 - Run `npm init`
@@ -147,6 +152,53 @@ class Teacher extends Person{
 - or `export let name = ali; export let function getName(){}`
 - or `let name = ali; function getName(){}; export {name as nm, getName as gn}` and then `import {nm, gn}`
 
+## Promises
+- When define promises, you have to use a function with two inputs as a input constructior parameter:  
+  `function example (resolve, reject){}; const myPromise = new Promise(example)`
+- By calling `resolve` or `reject` we specify if promise is successful or not. 
+- `then` can be deifned for promise: `promise.then(success, failure)`. Do not use `Promise.then(success(), failure())`
+- We can separate success handler from failure handler: `promise.then(success).catch(failure)` or  
+- `promise.then(success).then(null, failure)`
+- Chaining promises: 
+  1. Don't forget to return the new promise
+  2. Don't nested them. Chain them.
+  ```
+    promise
+    .then((success)=>{return nextPromise(success)})
+    .then((secondReturn => {console.log(secondReturn)}))
+  ```
+- We can wait for all promisses to complete: `Promise.all([promise1, promise2, ...])`
+
+## Async / Await
+- `async function something(x){ return 2}` it returns promise
+- `await` will wait for your function to resolve: `async function something(){ let p = await Promise()}`
+- If not using `await` then the result of async function would be a `Promise { <pending> }`
+- catch error: 
+  ```
+    async function doSomething(){
+      try{
+        successs();
+      }catch{
+        logError();
+      }
+    }
+  ```
+
+## Requests
+```
+const xhr = new XMLHttpRequest;
+const url = 'https://api-to-call.com/endpoint';
+
+xhr.responseType = 'json';
+xhr.onreadystatechange = () => {
+  if (xhr.readyState === XMLHttpRequest.DONE) {
+    return xhr.response;
+  }
+};
+
+xhr.open('GET', url);
+xhr.send();
+```
 
 
 
@@ -168,11 +220,3 @@ class Teacher extends Person{
 
 
 
-
-
-
-
-
-
-
-i
