@@ -10,7 +10,18 @@
   - `set wildmode=list,longest`
  - `set wildmenu`
 
- 
+## Navigate
+ - Switch windows: `Ctrl + w` + `w`
+ - Open new Tab: `:tabedit`
+ - Open new Buffer: `:e`
+ - Switch between tabs: `gt` and `gT`
+ - Switch between buffers: add following to `.vimrc` and use tabs
+ - Close buffer: `bd`
+```
+nnoremap  <silent>   <tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bnext<CR>
+nnoremap  <silent> <s-tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bprevious<CR>
+```  
+
 ## Modes  
 Switch between modes with `esc` and then type correspondig letter  
   

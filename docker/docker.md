@@ -2,14 +2,15 @@
  - create `Dockerfile`
  - `docker build -t image_name:version .` # create image
  - `docker images` # check all images
- - `docker run --name container_name -p 80:80 image_name --name container_name` # create and start container
+ - `docker run --name container_name -p 80:80 image_name` # create and start container
  - `docker exec -it container_name bash` # run bash inside container
  - `docker stop container_name`
  - `docker start container_name` # start container
- - `docker container rm container_name` # remove container 
+ - `docker rm container_name` # remove container 
  - `docker rm $(docker ps -a -q)` # remove all containers  
  - `docker pull image-name-here`
  - `docker ps -a`
+ - `docker rmi image_id`
 
  - ports HOST:CONTAINER
  - ports CONTAINER
