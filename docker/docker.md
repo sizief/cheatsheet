@@ -23,3 +23,6 @@
  - `docker-compose down` # stop and remove containers
  - `docker-compose start` # start containers
  - `docker-compose run app rails generate model` #- docker-compose run container-name bash
+ 
+ ## Clear things
+ After working with docker you may find that your free storage is getting really small. First check the space by `df -h` also you can check more in depth with `sudo ncdu -x /` which / is the path of the folder you want to check. Finally you can always run `docker image prune -a` to remove all danglong and unused objects.
