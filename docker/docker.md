@@ -2,7 +2,7 @@
  - create `Dockerfile`
  - `docker build -t image_name:version .` # create image
  - `docker images` # check all images
- - `docker run --name container_name -p 80:80 image_name` # create and start container
+ - `docker run --name container_name -p 80:80 --rm image_name` # create and start container, rm after stop
  - `docker exec -it container_name bash` # run bash inside container
  - `docker stop container_name`
  - `docker start container_name` # start container
