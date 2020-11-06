@@ -1,0 +1,81 @@
+version: '2.1'
+services:
+  reverse-proxy:
+    image: traefik:v2.2
+    command: --api.dashboard=true --providers.docker --accesslog=true --entrypoints.web.address=:3500 --entrypoints.websecure.address=:3501 --certificatesresolvers.myresolver.acme.email=sizief@gmail.com --certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json --certificatesresolvers.myresolver.acme.httpchallenge.entrypoint=web
+    ports:
+      - "3500:80"
+      - "3501:443"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ../data/letsencrypt:/letsencrypt
+    labels:
+      - traefik.http.routers.api.rule=Host(`traefik.pomodoro.works`)
+      - traefik.http.routers.api.service=api@internal
+      - traefik.http.routers.api.middlewares=auth
+      # Note: all dollar signs in the hash need to be doubled for escaping.
+      # To create a user:password pair, the following command can be used:
+      # echo $(htpasswd -nb user password) | sed -e s/\\$/\\$\\$/g
+      - traefik.http.middlewares.auth.basicauth.users=ali:$$apr1$$MD/.bAsj$$mVrYRcyWOihX9sllYJS8f0
+      # global redirect to https
+      - traefik.http.routers.http-catchall.rule=hostregexp(`{host:.+}`)
+      - traefik.http.routers.http-catchall.entrypoints=web
+      - traefik.http.routers.http-catchall.middlewares=redirect-to-https
+      # middleware redirect
+      - traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https
+  db:
+    image: postgres:9.4.5
+    env_file:
+      - /home/sizief/pomodoro_project/env.db
+      # Check api/.env.db to see what should be inside this file
+    volumes:
+      - /var/lib/postgresql/9.5/main:/var/lib/postgresql/data
+    healthcheck:
+        test: ["CMD-SHELL", "psql -h localhost -p 5432 -U postgres -v ON_ERROR_STOP=1 -c 'select version()' &> /dev/null"]
+        test: ["CMD-SHELL", "pg_isready -U postgres"] #Are you really up?
+        interval: 2s
+        timeout: 30s
+        retries: 15
+  api:
+    build:
+      context: ./api
+    links:
+      - db:db
+    depends_on:
+      db:
+        condition: service_healthy
+    tty: true
+    stdin_open: true
+    ports:
+     - 4000:4000
+    env_file:
+      - ./api/.env.prod
+      - /home/sizief/pomodoro_project/env.db
+    labels:
+      - traefik.http.routers.pomodoro-api.rule=Host(`api.pomodoro.works`)
+      - traefik.protocol=https
+      #- traefik.http.services.apiali.loadbalancer.healthcheck.hostname=dev-api.pomodoro.works
+      #- traefik.http.services.apiali.loadbalancer.healthcheck.path=/health-check
+      #- traefik.http.services.apiali.loadbalancer.healthcheck.interval=30s
+      - traefik.http.routers.pomodoro-api.tls=true
+      - traefik.http.routers.pomodoro-api.tls.certresolver=myresolver
+  app:
+    tty: true
+    ports:
+      - "3000:80"
+    build:
+      context: ./app
+      dockerfile: Dockerfile_production
+      args:
+        -  GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID}
+    tty: true
+    stdin_open: true
+    labels:
+      - traefik.http.routers.app.rule=Host(`pomodoro.works`, `www.pomodoro.works`)
+      - traefik.protocol=https
+      - traefik.http.routers.app.tls=true
+      - traefik.http.routers.app.tls.certresolver=myresolver
+      - traefik.http.middlewares.route-to-index.stripprefix.prefixes=/project,/history
+      - traefik.http.routers.app.middlewares=route-to-index@docker
+      # this is not working because og Go Regex version. The idea is to catch all but static files
+      #- traefik.http.middlewares.route-to-index.stripprefixregex.regex="^((?!.png|.js|.json|.css|.jpeg).)*$"

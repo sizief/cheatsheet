@@ -2,7 +2,7 @@
  - create `Dockerfile`
  - `docker build -t image_name:version .` # create image
  - `docker images` # check all images
- - `docker run --name container_name -p 80:80 image_name` # create and start container
+ - `docker run --name container_name -p 80:80 --rm image_name` # create and start container, rm after stop
  - `docker exec -it container_name bash` # run bash inside container
  - `docker stop container_name`
  - `docker start container_name` # start container
@@ -23,6 +23,10 @@
  - `docker-compose down` # stop and remove containers
  - `docker-compose start` # start containers
  - `docker-compose run app rails generate model` #- docker-compose run container-name bash
+<<<<<<< HEAD
 
 ## Postgresql
  - `docker run --name solo-postgres -e POSTGRES_PASSWORD=1 -e POSTGRES_USER=ali -e POSTGRES_DB=rails-engine -e PGDATA=/var/lib/postgresql/9.5/rails-engine -e POSTGRES_HOST_AUTH_METHOD=trust -p 5432:5432 postgres:9.4.5`
+   
+## Clear things
+ After working with docker you may find that your free storage is getting really small. First check the space by `df -h` also you can check more in depth with `sudo ncdu -x /` which / is the path of the folder you want to check. Finally you can always run `docker system prune -a` to remove all danglong and unused objects.
