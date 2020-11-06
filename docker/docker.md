@@ -23,3 +23,6 @@
  - `docker-compose down` # stop and remove containers
  - `docker-compose start` # start containers
  - `docker-compose run app rails generate model` #- docker-compose run container-name bash
+
+## Postgresql
+ - `docker run --name solo-postgres -e POSTGRES_PASSWORD=1 -e POSTGRES_USER=ali -e POSTGRES_DB=rails-engine -e PGDATA=/var/lib/postgresql/9.5/rails-engine -e POSTGRES_HOST_AUTH_METHOD=trust -p 5432:5432 postgres:9.4.5`
