@@ -1,0 +1,59 @@
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=/usr/bin/fzf
+
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'dracula/vim'
+Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
+Plugin 'tomlion/vim-solidity'
+Plugin 'preservim/nerdtree'
+Plugin 'kana/vim-smartinput'
+Plugin 'dense-analysis/ale'
+call vundle#end()
+
+syntax on
+syntax enable
+
+filetype plugin indent on
+
+let g:airline#extensions#tabline#enabled = 1
+
+map gn :bn<cr>
+map gp :bp<cr>
+map gd :bd<cr>
+
+color default
+colorscheme dracula
+
+set encoding=utf8
+set background=dark "to have this theme on Tmux
+set t_Co=256 "to have this theme on Tmux
+set number
+set listchars=trail:~,tab:>-\ ,eol:< " show special characters
+set list
+set cindent
+set shiftwidth=2
+set cursorcolumn
+set ma
+set expandtab
+" Change buffer without saving
+set hidden
+
+" Map Tab to switch buffers
+nnoremap  <silent>   <tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bnext<CR>
+nnoremap  <silent> <s-tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bprevious<CR>
+nnoremap <Leader>\ :w<cr>
+nnoremap <silent> <C-f> :Files<CR>
+
+call smartinput#define_rule({
+      \   'at': '\%#',
+      \   'char': '{',
+      \   'input': '{<Space><Space>}<Left><Left>',
+      \   'filetype': ['ruby'],
+      \ })
