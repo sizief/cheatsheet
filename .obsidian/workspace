@@ -1,0 +1,100 @@
+{
+  "main": {
+    "id": "1ce39a597df9166e",
+    "type": "split",
+    "children": [
+      {
+        "id": "845501fac45f424b",
+        "type": "leaf",
+        "active": true,
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Nginx.md",
+            "mode": "source"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "05ad41aa64f58b0f",
+    "type": "split",
+    "children": [
+      {
+        "id": "d71a8af53f0bb2b1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9deaed1975457b3f",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "0e5ffe15fd597a06",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "ec17739742c24a67",
+    "type": "split",
+    "children": [
+      {
+        "id": "369153214b8402cb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "957c6b62e6012de8",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Nginx.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "lastOpenFiles": [
+    "Untitled.md",
+    "postgres.md",
+    "lpic-1.md",
+    "javascript.md",
+    "git.md",
+    "elixir.md",
+    "dart.md",
+    "vim.md",
+    "README.md",
+    "react.md"
+  ]
+}
