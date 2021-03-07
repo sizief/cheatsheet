@@ -18,3 +18,6 @@ create htnl file inside the example.com folder
 `sudo nginx -t`
 `sudo systemctl restart nginx`
 
+## logs
+`cat /var/log/nginx/error.log`
+`cat /var/log/nginx/access	.log`

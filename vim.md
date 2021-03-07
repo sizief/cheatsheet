@@ -1,11 +1,14 @@
+ 
 ## General points
 * Install [vundle vim](https://github.com/VundleVim/Vundle.vim) to manage etenxion  
 * Run `:PluginInstall` to install plugins 
 * Run `:so %` in `.vimrc` to source the latest updates on `.vimrc` file whenever `.vimrc` is changed. 
-* Run any command with `:!` for example `:!git` correspondig
-* `<CR>` means carriage returns = ENTER
-* `<Leader>anything` means leader ( default is `\`) and anything after that.
+- Run any command with `:!` for example `:!git` correspondig
+- `<CR>` means carriage returns = ENTER
+- `<Leader>anything` means leader ( default is `\`) and anything after that.
 
+## Search and replace
+- `:%s/find/replace/g` for all occurences of `find` in the file
 ## Set Config
   - `set wildmode=list,longest`
  - `set wildmenu`

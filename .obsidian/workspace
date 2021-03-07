@@ -4,13 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "845501fac45f424b",
+        "id": "cc3f24c120651df6",
         "type": "leaf",
         "active": true,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Nginx.md",
+            "file": "postgres.md",
             "mode": "source"
           }
         }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "psql",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -49,7 +49,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -69,7 +70,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Nginx.md",
+                "file": "postgres.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,15 +87,15 @@
     "collapsed": true
   },
   "lastOpenFiles": [
-    "Untitled.md",
     "postgres.md",
+    "docker/docker.md",
+    "Nginx.md",
+    "vim.md",
+    "perl/nutshell.md",
+    "تست فارسی.md",
+    "Untitled.md",
     "lpic-1.md",
     "javascript.md",
-    "git.md",
-    "elixir.md",
-    "dart.md",
-    "vim.md",
-    "README.md",
-    "react.md"
+    "git.md"
   ]
 }
