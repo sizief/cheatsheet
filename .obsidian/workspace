@@ -10,7 +10,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "postgres.md",
+            "file": "Factorial.md",
             "mode": "source"
           }
         }
@@ -49,8 +49,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -70,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "postgres.md",
+                "file": "Factorial.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -87,15 +86,15 @@
     "collapsed": true
   },
   "lastOpenFiles": [
+    "Untitled.md",
+    "aws.md",
     "postgres.md",
     "docker/docker.md",
     "Nginx.md",
     "vim.md",
     "perl/nutshell.md",
     "تست فارسی.md",
-    "Untitled.md",
     "lpic-1.md",
-    "javascript.md",
-    "git.md"
+    "javascript.md"
   ]
 }
