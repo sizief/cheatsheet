@@ -14,6 +14,7 @@
   
 - find in file  
 -  `grep -rl "text" folder`  
+-  grep -rnIi "$1" . --color --exclude-dir={coverage,node_modules,.cache} --exclude=yarn.lock;
   
 - folder or file size  
 - `du -sh foldr_name`  

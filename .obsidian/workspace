@@ -4,7 +4,7 @@
     "type": "split",
     "children": [
       {
-        "id": "cc3f24c120651df6",
+        "id": "7cc19fac311c776b",
         "type": "leaf",
         "active": true,
         "state": {
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "psql",
+                "query": "nomad",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -86,15 +86,15 @@
     "collapsed": true
   },
   "lastOpenFiles": [
+    "Factorial.md",
     "Untitled.md",
+    "vim.md",
+    "bash/bash.md",
     "aws.md",
     "postgres.md",
     "docker/docker.md",
     "Nginx.md",
-    "vim.md",
     "perl/nutshell.md",
-    "تست فارسی.md",
-    "lpic-1.md",
-    "javascript.md"
+    "تست فارسی.md"
   ]
 }

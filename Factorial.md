@@ -36,6 +36,4 @@ $redis.del('NewPayroll::Company_1')
 
 nomad job stop -purge  factorial-backend-batch-tasks
 
-grep -rnIi "$1" . --color --exclude-dir={coverage,node_modules,.cache} --exclude=yarn.lock;
-
 mysql --user=factorial_development --password factorial_development
