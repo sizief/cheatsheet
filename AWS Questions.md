@@ -1,0 +1,1 @@
+Is RDS CPU/RAM/HDD are fixed?

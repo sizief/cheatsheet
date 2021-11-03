@@ -20,4 +20,4 @@ create htnl file inside the example.com folder
 
 ## logs
 `cat /var/log/nginx/error.log`
-`cat /var/log/nginx/access	.log`
+`tail -f /var/log/nginx/access.log`

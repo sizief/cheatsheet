@@ -23,7 +23,7 @@ Terraform
 bin/factorio terraform help
 bin/factorio terraform init datadog
 bin/factorio terraform plan datadog
-bin/factorio terraform apply datadog
+bin/factorio terraform apply datadog 
 
 
 deploy

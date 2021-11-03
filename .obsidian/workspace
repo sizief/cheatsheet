@@ -4,13 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "7cc19fac311c776b",
+        "id": "2ea68c5991432e67",
         "type": "leaf",
-        "active": true,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Factorial.md",
+            "file": "Terraform.md",
             "mode": "source"
           }
         }
@@ -40,7 +39,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "nomad",
+                "query": "terra",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -69,10 +68,12 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Factorial.md",
+                "file": "Terraform.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -85,16 +86,17 @@
     "width": 300,
     "collapsed": true
   },
+  "active": "2ea68c5991432e67",
   "lastOpenFiles": [
-    "Factorial.md",
     "Untitled.md",
-    "vim.md",
-    "bash/bash.md",
-    "aws.md",
+    "Factorial.md",
     "postgres.md",
-    "docker/docker.md",
-    "Nginx.md",
-    "perl/nutshell.md",
-    "تست فارسی.md"
+    "Consul.md",
+    "nomad.md",
+    "Puppet.md",
+    "aws.md",
+    "docker.md",
+    "bash.md",
+    "Bash.md"
   ]
 }
