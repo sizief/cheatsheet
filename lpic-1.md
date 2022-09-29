@@ -15,3 +15,16 @@ Resources:
   - ` expression  && command ` do command if exit status of expression is true
   - ` expression || command ` do command if exit status of expression is false
   - ` exec > file_name ` redirect output to shell
+
+## Processes
+- `p -eH --forest` shows hierarchy based tree of pses
+- `p -u ali` pses that belongs to ali
+
+## users
+`w` who is already online
+`w ali` -> what is he doing
+`less /etc/passwd` list users
+`pkill -KILL -u raj` logout ali
+
+## shared libraries
+They are .so or .a files uner /lib. Use ldd to see every binary uses what shared libraries

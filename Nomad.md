@@ -58,7 +58,7 @@ Vagrant.configure("2") do |config|
 ```
 
 ### Cluster
-If you have problem, delete the /nomad/data folder.
+If you have problem, delete the /opt/nomad/data folder. and create peer.json, see https://learn.hashicorp.com/tutorials/nomad/outage-recovery
 
 Consul should be installed
 `vagrant@n2:~$ consul agent -node=agent-two -bind=172.20.20.11 -enable-script-checks=true -data-dir=/tmp/consul -config-dir=/etc/consul.d`

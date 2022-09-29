@@ -5,6 +5,7 @@ Puppet configure machines.
 - Or by using Bolt admin can run puppet on each node via SSH (no agent needed)
 
 ### Helpers
+notify{"${user_name}:${$data}":} -> use this with bolt
 notice('anything')
 
 echo 'notice($filesystems)' | puppet apply # pass fact to puppet apply
