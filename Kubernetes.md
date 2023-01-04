@@ -5,25 +5,10 @@ Cluster: The physical platform where all  components, capabilities are hosted.
 Context: Cluster and User config. An abstraction for Kubectl.
 Namespace: logical partition inside a specific cluster
 
-## Minikube
-A tool to play with K8S on local machine
-```shell
-minikube start
-minikube stop
-minikube delete # deletes vm
-minikube dashboard
-minikube service hello-node # to assign public ip to load balancer
-```
-
-#### Addons
-```shell
-minikube addons list
-minikube addons enable metrics-server
-```
-
 
 ## Kubectl
 Command line tool to interact with K8s
+
 #### All together
 ```bash
 kubectl create deployment hello-node --image=registry.k8s.io/echoserver:1.4
@@ -55,7 +40,7 @@ kubectl get rs
 #### Pods
 ```shell
 kubectl get pods # -A for all namespaces
-kubectl decribe pods
+kubectl describe pods
 ```
 
 #### Service
@@ -65,8 +50,23 @@ kubectl expose deployment/hello-node --type=NodePort --port=8080
 kubectl get services
 kubectl describe services/kubernetes
 kubectl delete service hello-node
-minikube service hello-node # to assign public ip to load balancer
 ```
+
+Pods can see each other by using the service name, for example in the following service manifest:
+```
+apiVersion: v1
+kind: Service
+metadata:
+  name: ambassador-test-svc
+spec:
+  selector:
+    app: ambassador-test
+  ports:
+  - protocol: TCP
+    port: 8081
+    targetPort: 80
+```
+this service is reachanble by `curl ambassador-test-svc:8081` from other pods in the same namespace
 
 #### ConfigMaps
 ```shell
@@ -112,17 +112,17 @@ All context configs are saved in `~/.kube/config`
 kubectl config use-context minikube
 ```
 
-#### configuration files
-```shell
-kubectl apply -f https://k8s.io/examples/service/load-balancer-example.yaml
-```
-
 
 #### Namespaces
 ```bash
 kubectl get namespaces
 ```
 
+#### Cronjobs
+```shell
+kubectl get cronjobs
+kubectl delete cronjobs CRONNAME
+```
 
 #### Flux
 ```bash
@@ -131,3 +131,18 @@ flux suspend kustomization <name> # to stop listening to git repo and made chang
 flux resume kustomization <name> # continue fluxing
 ```
 
+## Minikube
+A tool to play with K8S on local machine
+```shell
+minikube start
+minikube stop
+minikube delete # deletes vm
+minikube dashboard
+minikube service hello-node # to assign public ip to load balancer
+```
+
+#### Addons
+```shell
+minikube addons list
+minikube addons enable metrics-server
+```
